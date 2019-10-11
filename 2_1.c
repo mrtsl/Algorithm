@@ -2,6 +2,6 @@
 
 int main()
 {
-    printf("111111\n");
+    printf("11xxxx1\n");
     return 0;
 }
