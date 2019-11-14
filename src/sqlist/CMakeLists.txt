@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8.12)
+
+AUX_SOURCE_DIRECTORY(. DIR_SQLIST_SRCS)
+
+ADD_LIBRARY (SqList ${DIR_SQLIST_SRCS})

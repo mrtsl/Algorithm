@@ -5,15 +5,16 @@ project(Algorithm)
 include_directories(
     include
 )
+
+aux_source_directory(./src DIR_SRCS)
+
 add_subdirectory(src)
 
-aux_source_directory({CMAKE_CURRENT_SOURCE_DIR}/src DIR_SRCS)
-
 # 指定生成目标
-add_executable(Algorithm ${DIR_SRCS})
+ADD_EXECUTABLE(xxx ${DIR_SRCS})
 
-target_link_libraries (Algorithm pthread)
+target_link_libraries (xxx SqList BASE)
 
-add_executable(demo demo.cpp) # 生成可执行文件
+#add_executable(demo demo.cpp) # 生成可执行文件
 # add_library(common STATIC .cpp) # 生成静态库
 # add_library(common SHARED .cpp) # 生成动态库或共享库
