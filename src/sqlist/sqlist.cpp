@@ -5,7 +5,7 @@ ElemType DelMinNum(SqList &L)
 {
     ElemType minNum;
     if (L.length == 0){
-        printf("NULL SQLIST!\n");
+        LOG("NULL SQLIST!\n");
         return False;
     }
     for (int i = 0; i < L.length; i++) {
@@ -21,7 +21,7 @@ void ReverseSqList(SqList &L)
     ElemType temp;
     if(L.length == 0)
     {
-        printf("NULL sqlist\n");
+        LOG("NULL sqlist\n");
     } else {
         for (int i = 0;i < L.length/2; i++){
             SwapElemSqList(L.data[i], L.data[L.length - 1 - i]);
@@ -54,3 +54,29 @@ void DelXSqList2(SqList &L, ElemType x)
     L.length = L.length - k;
 }
 
+//p18 2.4
+void DelSTNumSqList(SqList &L, ElemType min, ElemType max)
+{
+    int k = 0;
+    if (L.length == 0) {
+        LOG("sqlist null\n");
+        return;
+    } else if(min >= max) {
+        LOG("input error");
+    } else {
+        for (int i = 0; i < L.length; i++) {
+            if(L.data[i] <= min || L.data[i] >= max) {
+                L.data[k] = L.data[i];
+                k++;
+            }
+        }
+    }
+    L.length = k;
+
+}  //p18 2.5 与此题相同
+
+//p18 2.6 
+void DelSameNumSqList(SqList &L)
+{
+    
+}

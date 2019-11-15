@@ -20,3 +20,4 @@ void DisplaySqList(SqList L);
 void ReverseSqList(SqList &L);
 void DelXSqList(SqList &L, ElemType x);
 void DelXSqList2(SqList &L, ElemType x);
+void DelSTNumSqList(SqList &L, ElemType min, ElemType max);

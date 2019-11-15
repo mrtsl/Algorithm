@@ -17,7 +17,7 @@ void AssignElemSqList(ElemType assigned, ElemType assign)
 
 void DisplayElemSqList(ElemType x)
 {
-    printf("%d  ",x);
+    LOG("%d  ",x);
 }
 
 void ClearSqList(SqList &L)
@@ -52,7 +52,7 @@ SqList CreateSqList2(int number)
 void DisplaySqList(SqList L)
 {
     if (L.length == 0) {
-        printf("sqlist null\n");
+        LOG("sqlist null\n");
     } else {
         for (int i = 0; i < L.length; i++) {
             DisplayElemSqList(L.data[i]);
