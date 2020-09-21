@@ -28,3 +28,5 @@ SqList SqListCat(SqList L1, SqList L2);
 void ReverseTwoSqList(SqList &L, int m, int n);
 void FindOrInstertx(SqList &L, ElemType x);
 bool InsertSqList(SqList &L, int x, ElemType data);
+void xxx(int *a, int n);
+void sort(int *r, int n);

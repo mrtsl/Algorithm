@@ -29,7 +29,7 @@ void ReverseSqList(SqList &L, int left, int right)
     } else {
         LOG(" left = %d right = %d\n", left, right);
         
-        for (int i = 0;i <= mid - le ft; i++){ //二分逆序
+        for (int i = 0;i <= mid - left; i++){ //二分逆序
             SwapElemSqList(L.data[left + i], L.data[right - i]);
             LOG("L.left data[%d] = %d, L.right data[%d] = %d\n", i + left, L.data[i + left], right - i, L.data[right - i]);
         }
@@ -145,3 +145,49 @@ void FindOrInstertx(SqList &L, ElemType x)
 }
 
 
+void xxx(int *a, int n)
+ {
+int d = 1, j;
+     printf("d: %d ::::",d);
+for(int x = 0; x < n; x++) {
+    LOG("%d, ",a[x]);
+}
+printf("\n");
+while ( d < n /3 ) d = 3*d+1;
+ while ( d > 0 ) {
+ for ( int i = d; i < n; i++ ) {
+int temp = a[i];
+ j = i;
+ while ( j >= d && a[j-d] > temp ) { a[j] = a[j-d]; j -= d; }
+a[j] = temp;
+}
+printf("d: %d ::::",d);
+for(int x = 0; x < n; x++) {
+    LOG("%d, ",a[x]);
+}
+printf("\n");
+d /= 3;
+ }
+}
+
+void sort(int *r, int n)
+{
+    int i, j, x;
+    for (i=2; i<=n; i++) {
+        x=r[i]; r[0]=x; j=i-1;
+    while (x < r[j]) {
+        r[j+1]=r[j];
+        j=j-1;
+        printf("--");
+        for(int z = 0; z <= n; z++) {
+        LOG("%d, ",r[z]);
+    }
+        printf("--\n");
+    }
+    r[j+1]=x;
+    for(int y = 0; y <= n; y++) {
+        LOG("%d, ",r[y]);
+    }
+        printf("\n");
+    }
+}

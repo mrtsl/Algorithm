@@ -18,8 +18,14 @@ int main()
     //DisplaySqList(LLL);
     //ReverseTwoSqList(LLL, 10, 10);
     //DisplaySqList(LLL);
-    SqList L4 = CreateSqList4(6);
-    FindOrInstertx(L4, 5);
-    DisplaySqList(L4);
+    //SqList L4 = CreateSqList4(6);
+    //FindOrInstertx(L4, 5);
+    //DisplaySqList(L4);
+    
+    int a[10] = {77,44,99,66,33,55,88,22,44,11};
+    int b[6] = {-1, 3, 7, 2, 5, 6};
+    //xxx(a,10);
+    sort(b,5);
+
     return 0;
 }
